@@ -1,5 +1,8 @@
-name: continuous-integration
-on: [push]
+name: Continuous Integration
+on:
+  push:
+    branches:
+      - '*'
 jobs:
   ubuntu:
     runs-on: ubuntu-latest
