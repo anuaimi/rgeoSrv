@@ -1,5 +1,5 @@
 # Build rgeoSrv in build-env
-FROM golang:1.13.8-alpine3.11 AS build-env
+FROM golang:1.23.4-alpine3.21 AS build-env
 
 # Add user to prevent running as root
 RUN adduser -D -u 10000 rgeoSrv
@@ -18,7 +18,7 @@ RUN go build -o rgeoSrv
 
 
 # New container to run in
-FROM alpine:3.11
+FROM alpine:3.21
 
 # Add user to prevent running as root
 RUN adduser -D -u 10000 rgeoSrv

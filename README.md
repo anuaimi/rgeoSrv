@@ -1,4 +1,5 @@
 # rgeoSrv
+
 [![](https://img.shields.io/github/workflow/status/sams96/rgeoSrv/continuous-integration?style=for-the-badge)](https://github.com/sams96/rgeoSrv/actions?query=workflow%3Acontinuous-integration)
 [![](https://goreportcard.com/badge/github.com/sams96/rgeoSrv?style=for-the-badge)](https://goreportcard.com/report/github.com/sams96/rgeoSrv)
 [![Release](https://img.shields.io/github/tag/sams96/rgeoSrv.svg?label=release&color=24B898&logo=github&style=for-the-badge)](https://github.com/sams96/rgeoSrv/releases/latest)
@@ -9,26 +10,48 @@ rgeoSrv wraps the package rgeo into a reverse geocoding microservice.
 See [github.com/sams96/rgeo](https://github.com/sams96/rgeo) for more
 information on rgeo.
 
-### Installation
+## Installation
 
-    go get github.com/sams96/rgeoSrv/..
+```bash
+go get github.com/sams96/rgeoSrv/..
+```
 
 or,
 
-    docker pull docker.pkg.github.com/sams96/rgeosrv/rgeosrv
+```bash
+docker pull docker.pkg.github.com/sams96/rgeosrv/rgeosrv
+```
 
 ### Usage
 
-    rgeoSrv -addr localhost:8080
+```bash
+rgeoSrv -addr localhost:8080
+```
 
 or,
 
-	docker run -p 8080:8080 docker.pkg.github.com/sams96/rgeosrv/rgeosrv and
+```bash
+docker run -p 8080:8080 docker.pkg.github.com/sams96/rgeosrv/rgeosrv
+```
 
 then:
 
-	curl "localhost:8080/query?0&51.5045"
+```bash
+curl "localhost:8080/query?0&51.5045"
+```
 
 will return:
 
-	{"country":"United Kingdom","country_long":"United Kingdom of Great Britain and Northern Ireland","country_code_2":"GB","country_code_3":"GBR","continent":"Europe","region":"Europe","subregion":"Northern Europe","province":"Tower Hamlets","province_code":"GB-TWH","city":"London"}
+```json
+{"country":"United Kingdom","country_long":"United Kingdom of Great Britain and Northern Ireland","country_code_2":"GB","country_code_3":"GBR","continent":"Europe","region":"Europe","subregion":"Northern Europe","province":"Tower Hamlets","province_code":"GB-TWH","city":"London"}
+```
+
+### Development
+
+```bash
+go get -u ./...
+go build
+docker build -t rgeosrv .
+docker run -p 8080:8080 rgeosrv
+curl "localhost:8080/query?0&51.5045"
+```
