@@ -1,4 +1,4 @@
-module github.com/sams96/rgeoSrv
+module github.com/anuaimi/rgeoSrv
 
 go 1.23
 
