@@ -1,9 +1,9 @@
 # rgeoSrv
 
-[![](https://img.shields.io/github/workflow/status/anuaimi/rgeoSrv/continuous-integration?style=for-the-badge)](https://github.com/anuaimi/rgeoSrv/actions?query=workflow%3Acontinuous-integration)
-[![](https://goreportcard.com/badge/github.com/anuaimi/rgeoSrv?style=for-the-badge)](https://goreportcard.com/report/github.com/anuaimi/rgeoSrv)
-[![Release](https://img.shields.io/github/tag/anuaimi/rgeoSrv.svg?label=release&color=24B898&logo=github&style=for-the-badge)](https://github.com/anuaimi/rgeoSrv/releases/latest)
-[![go.dev reference](https://img.shields.io/badge/go.dev-reference-007d9c?logo=go&logoColor=white&style=for-the-badge)](https://pkg.go.dev/github.com/anuaimi/rgeoSrv)
+
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/anuaimi/rgeoSrv/continuous-integration.yml) ![](https://goreportcard.com/badge/github.com/anuaimi/rgeoSrv)
+
+![GitHub Release](https://img.shields.io/github/v/release/anuaimi/rgeoSrv)
 
 rgeoSrv wraps the package rgeo into a reverse geocoding microservice.
 
